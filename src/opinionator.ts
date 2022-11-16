@@ -49,11 +49,11 @@ async function main() {
 
             const actionContainer = document.createElement('div');
             actionContainer.style.cssText = `
-              padding: 32px;
-              display = flex;
-              flexDirection = 'column';
-              alignItems = 'center';
-              gap = '10px';
+              padding: 64px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 10px;
             `;
             actionContainer.insertAdjacentHTML(
               'beforeend',
