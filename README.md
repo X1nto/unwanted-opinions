@@ -21,3 +21,9 @@ Coming soon.
 ## Safari
 
 Maybe?
+
+# Credits
+
+@busybox11 for their [Twitter Blue Nerd](https://gist.github.com/busybox11/53c76f57a577a47a19fab649a76f18e3), from which I used a huge amount of code.
+
+@wseagar for [Eight Dollars](https://github.com/wseagar/eight-dollars), which partially inspired this extensions.
