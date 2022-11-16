@@ -1,21 +1,21 @@
-# <img src="public/icons/icon_48.png" width="45" align="left"> Unwanted Opinion
+# Unwanted Opinion
 
-My Chrome Extension
+Are you tired of seeing tweets from Twitter Blue subscribers? Well, worry not, because Unwanted Opinion blocks tweets from Blue subscribers before you even get a glimpse of it!
 
-## Features
+| Before                 | After                 |
+| ---------------------- | --------------------- |
+| ![](/media/before.png) | ![](/media/after.png) |
 
-- Feature 1
-- Feature 2
+# Installation
 
-## Install
+## Chrome
 
-[**Chrome** extension]() <!-- TODO: Add chrome extension link inside parenthesis -->
+Coming soon
 
-## Contribution
+## Firefox
 
-Suggestions and pull requests are welcomed!.
+Coming soon
 
----
+## Safari
 
-This project was bootstrapped with [Chrome Extension CLI](https://github.com/dutiyesh/chrome-extension-cli)
-
+Maybe?
