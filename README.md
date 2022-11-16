@@ -10,7 +10,7 @@ Are you tired of seeing tweets from Twitter Blue subscribers? Well, worry not, b
 
 ## Chrome
 
-Coming soon
+Download the ZIP from the [latest GitHub Release](https://github.com/X1nto/unwanted-opinion/releases/latest), go to [Chrome Extensions](chrome://extensions) and drag-and-drop the ZIP file there.
 
 ## Firefox
 
