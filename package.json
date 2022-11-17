@@ -1,6 +1,6 @@
 {
   "name": "unwanted-opinion",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Blocks tweets from Twitter Blue users.",
   "private": true,
   "scripts": {
