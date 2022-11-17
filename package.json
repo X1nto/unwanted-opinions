@@ -1,11 +1,13 @@
 {
   "name": "unwanted-opinion",
   "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "description": "Blocks tweets from Twitter Blue users.",
   "private": true,
   "scripts": {
     "watch": "webpack --mode=development --watch --config config/webpack.config.js",
     "build": "webpack --mode=production --config config/webpack.config.js",
+    "build-chrome": "webpack --mode=production --config config/webpack.config.js --env target=chrome",
+    "build-firefox": "webpack --mode=production --config config/webpack.config.js --env target=firefox",
     "format": "prettier --write --ignore-unknown \"{config,public,src}/**/*.{html,css,js,ts,json}\""
   },
   "devDependencies": {
