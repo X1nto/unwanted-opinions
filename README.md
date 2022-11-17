@@ -36,7 +36,7 @@ Chrome WebStore coming soon.
 
 ## Firefox
 
-Coming soon.
+[![](media/get-it-on-firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/unwanted-opinion/)
 
 ## Safari
 
