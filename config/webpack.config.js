@@ -6,14 +6,6 @@ const CopyWebpackPlugin = require('copy-webpack-plugin');
 const common = require('./webpack.common.js');
 const PATHS = require('./paths');
 
-const scripts = {
-  entry: {
-    popup: PATHS.src + '/popup.ts',
-    opinionator: PATHS.src + '/opinionator.ts',
-    content: PATHS.src + '/content.ts',
-  },
-};
-
 const chrome = {
   output: {
     path: PATHS.buildChrome,
@@ -62,6 +54,14 @@ const dev = {
 
 // Merge webpack configuration files
 const config = (env, args) => {
+  const scripts = {
+    entry: {
+      popup: PATHS.src + '/popup.ts',
+      opinionator: PATHS.src + '/opinionator.ts',
+      content: PATHS.src + '/content.ts',
+    },
+    devtool: args.mode === 'production' ? false : 'source-map',
+  };
   switch (env.target) {
     case 'chrome':
       return merge(common, scripts, chrome);
