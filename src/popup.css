@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-background: rgb(8, 8, 8);
+  --color-outline: rgb(47, 51, 54);
+}
+
+body {
+  box-shadow: inset 0px 0px 0px 1px var(--color-outline);
+  background-color: var(--color-background);
+  width: 100px;
+  height: 100px;
+}
