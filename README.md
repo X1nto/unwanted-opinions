@@ -16,9 +16,15 @@ npm run build-chrome
 
 ## Firefox
 
+Requires web-ext
+
 ```
 npm run build-firefox
+cd build-firefox
+web-ext build
 ```
+
+The output zip will be in `build-firefox/web-ext-artifacts`
 
 # Installation
 
