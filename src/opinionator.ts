@@ -35,7 +35,7 @@ async function main() {
             //return if we already cucked blue users
             if (actualTweet.style.filter != '') continue;
 
-            actualTweet.style.filter = 'blur(30px)';
+            const actualTweetHeight = actualTweet.offsetHeight;
 
             const parentDiv = document.createElement('div');
             parentDiv.style.cssText = `
@@ -69,6 +69,8 @@ async function main() {
             showButton.addEventListener('click', () => {
               parentDiv.remove();
               actualTweet.style.filter = '';
+              actualTweet.style.height = actualTweetHeight + 'px';
+              parentDiv.style.height = actualTweetHeight + 'px';
             });
             showButton.innerHTML = `
             <div style='display: flex; flex-direction: column; justify-content: center; height: 100%'>
@@ -76,9 +78,19 @@ async function main() {
             <div>
             `;
 
+            actualTweet.style.filter = 'blur(30px)';
+
             actionContainer.appendChild(showButton);
             parentDiv.appendChild(actionContainer);
             article.appendChild(parentDiv);
+
+            console.log(actualTweetHeight + ' ' + actionContainer.offsetHeight);
+
+            //fix the cut-off
+            if (actualTweetHeight < actionContainer.offsetHeight) {
+              actualTweet.style.height = actionContainer.offsetHeight + 'px';
+              parentDiv.style.height = actionContainer.offsetHeight + 'px';
+            }
           }
         }
       }
