@@ -29,68 +29,66 @@ async function main() {
             continue;
           }
           let article = verification.closest('article');
-          console.log(article);
-          if (article !== null) {
-            const actualTweet = article.children[0] as HTMLElement;
-            //return if we already cucked blue users
-            if (actualTweet.style.filter != '') continue;
 
-            const actualTweetHeight = actualTweet.offsetHeight;
+          if (article === null) continue;
 
-            const parentDiv = document.createElement('div');
-            parentDiv.style.cssText = `
-              display: flex;
-              flex-direction: column;
-              justify-content: center;
-              position: absolute;
-              width: ${actualTweet.offsetWidth}px;
-              height: ${actualTweet.offsetHeight}px;
-            `;
+          const actualTweet = article.children[0] as HTMLElement;
+          //return if we already cucked blue users
+          if (actualTweet.style.filter != '') continue;
 
-            const actionContainer = document.createElement('div');
-            actionContainer.style.cssText = `
-              padding: 64px;
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              gap: 10px;
-            `;
-            actionContainer.insertAdjacentHTML(
-              'beforeend',
-              `
-              <svg viewBox="0 0 24 24" aria-hidden="true" style='${iconStyle}'><g><path d="M3.693 21.707l-1.414-1.414 2.429-2.429c-2.479-2.421-3.606-5.376-3.658-5.513l-.131-.352.131-.352c.133-.353 3.331-8.648 10.937-8.648 2.062 0 3.989.621 5.737 1.85l2.556-2.557 1.414 1.414L3.693 21.707zm-.622-9.706c.356.797 1.354 2.794 3.051 4.449l2.417-2.418c-.361-.609-.553-1.306-.553-2.032 0-2.206 1.794-4 4-4 .727 0 1.424.192 2.033.554l2.263-2.264C14.953 5.434 13.512 5 11.986 5c-5.416 0-8.258 5.535-8.915 7.001zM11.986 10c-1.103 0-2 .897-2 2 0 .178.023.352.067.519l2.451-2.451c-.167-.044-.341-.067-.519-.067zm10.951 1.647l.131.352-.131.352c-.133.353-3.331 8.648-10.937 8.648-.709 0-1.367-.092-2-.223v-2.047c.624.169 1.288.27 2 .27 5.415 0 8.257-5.533 8.915-7-.252-.562-.829-1.724-1.746-2.941l1.438-1.438c1.53 1.971 2.268 3.862 2.33 4.027z"></path></g></svg>
-              <span style='${titleStyle}'>Content Warning: This MF paid for Twitter!</span>
-              <span style='${descriptionStyle}'>The Tweet author paid 8 dollars for a goddamn checkmark.</span>
-              `
-            );
+          const actualTweetHeight = actualTweet.offsetHeight;
 
-            const showButton = document.createElement('button');
-            showButton.style.cssText = buttonStyle;
-            showButton.addEventListener('click', () => {
-              parentDiv.remove();
-              actualTweet.style.filter = '';
-              actualTweet.style.height = actualTweetHeight + 'px';
-              parentDiv.style.height = actualTweetHeight + 'px';
-            });
-            showButton.innerHTML = `
-            <div style='display: flex; flex-direction: column; justify-content: center; height: 100%'>
-              <span style='${buttonTextStyle}'>Show<span/>
-            <div>
-            `;
+          const parentDiv = document.createElement('div');
+          parentDiv.style.cssText = `
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: absolute;
+            width: ${actualTweet.offsetWidth}px;
+            height: ${actualTweet.offsetHeight}px;
+          `;
 
-            actualTweet.style.filter = 'blur(30px)';
+          const actionContainer = document.createElement('div');
+          actionContainer.style.cssText = `
+            padding: 64px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+          `;
+          actionContainer.insertAdjacentHTML(
+            'beforeend',
+            `
+            <svg viewBox="0 0 24 24" aria-hidden="true" style='${iconStyle}'><g><path d="M3.693 21.707l-1.414-1.414 2.429-2.429c-2.479-2.421-3.606-5.376-3.658-5.513l-.131-.352.131-.352c.133-.353 3.331-8.648 10.937-8.648 2.062 0 3.989.621 5.737 1.85l2.556-2.557 1.414 1.414L3.693 21.707zm-.622-9.706c.356.797 1.354 2.794 3.051 4.449l2.417-2.418c-.361-.609-.553-1.306-.553-2.032 0-2.206 1.794-4 4-4 .727 0 1.424.192 2.033.554l2.263-2.264C14.953 5.434 13.512 5 11.986 5c-5.416 0-8.258 5.535-8.915 7.001zM11.986 10c-1.103 0-2 .897-2 2 0 .178.023.352.067.519l2.451-2.451c-.167-.044-.341-.067-.519-.067zm10.951 1.647l.131.352-.131.352c-.133.353-3.331 8.648-10.937 8.648-.709 0-1.367-.092-2-.223v-2.047c.624.169 1.288.27 2 .27 5.415 0 8.257-5.533 8.915-7-.252-.562-.829-1.724-1.746-2.941l1.438-1.438c1.53 1.971 2.268 3.862 2.33 4.027z"></path></g></svg>
+            <span style='${titleStyle}'>Content Warning: This MF paid for Twitter!</span>
+            <span style='${descriptionStyle}'>The Tweet author paid 8 dollars for a goddamn checkmark.</span>
+            `
+          );
 
-            actionContainer.appendChild(showButton);
-            parentDiv.appendChild(actionContainer);
-            article.appendChild(parentDiv);
+          const showButton = document.createElement('button');
+          showButton.style.cssText = buttonStyle;
+          showButton.addEventListener('click', () => {
+            parentDiv.remove();
+            actualTweet.style.filter = '';
+            actualTweet.style.height = actualTweetHeight + 'px';
+            parentDiv.style.height = actualTweetHeight + 'px';
+          });
+          showButton.innerHTML = `
+          <div style='display: flex; flex-direction: column; justify-content: center; height: 100%'>
+            <span style='${buttonTextStyle}'>Show<span/>
+          <div>
+          `;
 
-            console.log(actualTweetHeight + ' ' + actionContainer.offsetHeight);
+          actualTweet.style.filter = 'blur(30px)';
 
-            //fix the cut-off
-            if (actualTweetHeight < actionContainer.offsetHeight) {
-              actualTweet.style.height = actionContainer.offsetHeight + 'px';
-              parentDiv.style.height = actionContainer.offsetHeight + 'px';
-            }
+          actionContainer.appendChild(showButton);
+          parentDiv.appendChild(actionContainer);
+          article.appendChild(parentDiv);
+
+          //fix the cut-off
+          if (actualTweetHeight < actionContainer.offsetHeight) {
+            actualTweet.style.height = actionContainer.offsetHeight + 'px';
+            parentDiv.style.height = actionContainer.offsetHeight + 'px';
           }
         }
       }
