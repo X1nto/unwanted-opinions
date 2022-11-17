@@ -6,6 +6,20 @@ Are you tired of seeing tweets from Twitter Blue subscribers? Well, worry not, b
 | ---------------------- | --------------------- |
 | ![](/media/before.png) | ![](/media/after.png) |
 
+# Building
+
+## Chrome
+
+```
+npm run build-chrome
+```
+
+## Firefox
+
+```
+npm run build-firefox
+```
+
 # Installation
 
 ## Chrome
