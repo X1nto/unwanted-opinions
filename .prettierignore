@@ -2,3 +2,5 @@
 
 # Ignore artifacts:
 build
+build-chrome
+build-firefox

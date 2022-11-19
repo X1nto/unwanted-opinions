@@ -1,9 +1,13 @@
 {
   "compilerOptions": {
-    "rootDir": "src",
     "target": "es6",
     "module": "commonjs",
     "esModuleInterop": true,
-    "strict": true
+    "strict": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "types": ["vite/client", "node", "chrome"],
+    "noEmit": true,
   }
 }
