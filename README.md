@@ -1,6 +1,6 @@
-# Unwanted Opinion
+# Unwanted Opinions
 
-Are you tired of seeing tweets from Twitter Blue subscribers? Well, worry not, because Unwanted Opinion blocks tweets from Blue subscribers before you even get a glimpse of it!
+Sometimes you might want to block specific type of content without blocking the actual content creators. Unwanted Opinions lets you block content using various options in the extension.
 
 | Before                 | After                 |
 | ---------------------- | --------------------- |
@@ -8,23 +8,15 @@ Are you tired of seeing tweets from Twitter Blue subscribers? Well, worry not, b
 
 # Building
 
-## Chrome
-
-```
+```sh
+npm i
+//To build the Chrome version
 npm run build-chrome
-```
-
-## Firefox
-
-Requires web-ext
-
-```
+//To build the Firefox version
 npm run build-firefox
-cd build-firefox
-web-ext build
 ```
 
-The output zip will be in `build-firefox/web-ext-artifacts`
+you can then zip the builds using [web-ext](https://github.com/mozilla/web-ext) for example
 
 # Installation
 
