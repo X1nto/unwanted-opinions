@@ -2,7 +2,7 @@ getStorage().then((storage) => {
   //stolen from Eight Dollars
   const settings = document.createElement('div');
   settings.id = 'unwanted-opinions-settings';
-  settings.innerHTML = JSON.stringify(storage);
+  settings.innerText = JSON.stringify(storage);
   document.body.appendChild(settings);
 
   const opinionator = document.createElement('script');
