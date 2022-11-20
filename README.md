@@ -2,6 +2,7 @@
 
 Sometimes you might want to block specific type of content without blocking the actual content creators. Unwanted Opinions lets you block content using various options in the extension.
 
+Example:
 | Before                 | After                 |
 | ---------------------- | --------------------- |
 | ![](/media/before.png) | ![](/media/after.png) |
