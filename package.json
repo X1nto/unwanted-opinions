@@ -1,7 +1,7 @@
 {
-  "name": "unwanted-opinion",
-  "version": "0.1.1",
-  "description": "Blocks tweets from Twitter Blue users.",
+  "name": "unwanted-opinions",
+  "version": "0.2.0",
+  "description": "Lets you block tweets using various options.",
   "license": "MIT",
   "private": true,
   "scripts": {
