@@ -74,7 +74,7 @@ async function main() {
 
           const actionContainer = document.createElement('div');
           actionContainer.style.cssText = `
-            padding: 64px;
+            padding: 32px;
             display: flex;
             flex-direction: column;
             align-items: center;
