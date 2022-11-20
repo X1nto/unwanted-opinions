@@ -23,13 +23,13 @@ you can then zip the builds using [web-ext](https://github.com/mozilla/web-ext) 
 
 ## Chrome
 
-Download the ZIP from the [latest GitHub Release](https://github.com/X1nto/unwanted-opinion/releases/latest) and extract it to a folder. Head to chrome://extensions, enable developer mode,click on "Load unpacked" and select the folder you extracted the ZIP to.
+Download the ZIP from the [latest GitHub Release](https://github.com/X1nto/unwanted-opinions/releases/latest) and extract it to a folder. Head to chrome://extensions, enable developer mode,click on "Load unpacked" and select the folder you extracted the ZIP to.
 
 Chrome WebStore coming soon.
 
 ## Firefox
 
-[![](media/get-it-on-firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/unwanted-opinion/)
+[![](media/get-it-on-firefox.png)](https://addons.mozilla.org/en-US/firefox/addon/unwanted-opinions/)
 
 ## Safari
 
