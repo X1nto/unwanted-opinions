@@ -1,5 +1,5 @@
 import { render } from 'solid-js/web';
-import Popup from './Popup';
+import Popup from './pages/Popup';
 import './index.css';
 
 const appContainer = document.querySelector('#app');

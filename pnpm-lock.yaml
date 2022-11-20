@@ -1,24 +1,26 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@types/chrome': 0.0.193
+  '@types/chrome': ^0.0.202
   '@types/node': 18.11.9
   prettier: 2.7.1
-  solid-js: ^1.4.8
+  solid-js: ^1.6.2
   typescript: 4.7.4
   vite: 3.0.4
-  vite-plugin-solid: ^2.3.0
+  vite-plugin-solid: ^2.4.0
+  web-ext-types: ^3.2.1
 
 dependencies:
   solid-js: 1.6.2
 
 devDependencies:
-  '@types/chrome': 0.0.193
+  '@types/chrome': 0.0.202
   '@types/node': 18.11.9
   prettier: 2.7.1
   typescript: 4.7.4
   vite: 3.0.4
   vite-plugin-solid: 2.4.0_solid-js@1.6.2+vite@3.0.4
+  web-ext-types: 3.2.1
 
 packages:
 
@@ -382,8 +384,8 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.14
     dev: true
 
-  /@types/chrome/0.0.193:
-    resolution: {integrity: sha512-R8C84oqvk8A8C8G1viBd8qLpDr86Y/jwD+KLgzUekbIT9RGds6a9GnlQyg8P7ltnGogTMHkiEQK0ZlcrvTeo3Q==}
+  /@types/chrome/0.0.202:
+    resolution: {integrity: sha512-Oc4daL9sFS+9MToVZPLMBxR7PxsEdod0b8wOY11lRr06GJp43MORvHeDyMD8QzeRGT6HI13oaYAe2PBgvALc4w==}
     dependencies:
       '@types/filesystem': 0.0.32
       '@types/har-format': 1.2.9
@@ -951,4 +953,8 @@ packages:
         optional: true
     dependencies:
       vite: 3.0.4
+    dev: true
+
+  /web-ext-types/3.2.1:
+    resolution: {integrity: sha512-oQZYDU3W8X867h8Jmt3129kRVKklz70db40Y6OzoTTuzOJpF/dB2KULJUf0txVPyUUXuyzV8GmT3nVvRHoG+Ew==}
     dev: true
