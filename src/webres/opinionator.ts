@@ -6,7 +6,7 @@ const descriptionStyle = 'font-size:15px;font-weight:400;';
 const iconStyle =
   'width:100%;height:24px;fill:rgb(255, 255, 255);margin-bottom:12px;';
 const buttonStyle =
-  'background-color:rgba(255, 255, 255, 0.25);backdrop-filter:blur(4px);align-self:flex-end;border-radius:9999px;padding-left:16px;padding-right:16px;padding-top:8px;padding-bottom:8px;min-height:32px;margin-top:12px;cursor:pointer;border:none;color:rgb(255,255,255);font-family:TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;';
+  'background-color:rgba(255, 255, 255, 0.25);backdrop-filter:blur(4px);align-self:flex-end;border-radius:9999px;padding-left:16px;padding-right:16px;min-height:32px;margin-top:12px;cursor:pointer;';
 const buttonTextStyle = 'font-size:14px;font-weight:700;';
 
 interface Settings {
@@ -82,7 +82,7 @@ async function main() {
             `
           );
 
-          const showButton = document.createElement('button');
+          const showButton = document.createElement('div');
           showButton.style.cssText = buttonStyle;
           showButton.addEventListener('click', () => {
             parentDiv.remove();
