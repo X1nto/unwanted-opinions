@@ -3,6 +3,7 @@ getStorage().then((storage) => {
   const settings = document.createElement('div');
   settings.id = 'unwanted-opinions-settings';
   settings.innerText = JSON.stringify(storage);
+  settings.style.display = 'none';
   document.body.appendChild(settings);
 
   const opinionator = document.createElement('script');
